@@ -1,7 +1,7 @@
 # Eternity Saga 2.5D Turn Based RPG
 
 ## Overview
-Eternity Saga is a 2D RPG game developed using the Unity. It offers an immersive gameplay experience Turn based open world RPG with captivating visuals 2D + 3D and an engaging storyline. This README file provides essential information about and how to get started with the project.
+Eternity Saga is a 2.5D turn based strategy RPG game developed using the Unity. It offers an immersive gameplay experience Turn based open world RPG with captivating visuals 2D + 3D and an engaging storyline. This README file provides essential information about and how to get started with the project.
 
 ### Prerequisites
 To run this project, you need to have the following engine, framework or repository cloned on your local machine:
