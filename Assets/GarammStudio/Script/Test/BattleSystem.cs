@@ -104,41 +104,31 @@ public class BattleSystem : MonoBehaviour
     private void UnitFinishedTurn(UnitController unit)
     {
         Debug.Log($"{unit.name} finished their turn!");
-        if (unit.IsFoe)
-        {
-            _enemiesCanPlay.Remove(unit);
-            if (AreAllUnitsIsDead(_enemies))
-            {
-                // Do something if all enemies dead. i.e Win pop out
-                Debug.Log("Won");
-            }
+        var isFoe = unit.IsFoe;
+        var activeUnitCanPlayList = isFoe ? _enemiesCanPlay : _alliesCanPlay;
+        var activeUnitList = isFoe ? _enemies : _allies;
 
-            if (_enemiesCanPlay.Count <= 0)
+        activeUnitCanPlayList.Remove(unit);
+        if (AreAllUnitsIsDead(activeUnitList))
+        {
+            // Do something if all enemies dead. i.e Win pop out
+            Debug.Log("Won");
+        }
+
+        if (activeUnitCanPlayList.Count <= 0)
+        {
+            if (isFoe)
             {
                 StartAlliesTurn();
             }
             else
             {
-                Debug.Log(_enemiesCanPlay[0].name);
+                StartEnemiesTurn();
             }
         }
         else
         {
-            _alliesCanPlay.Remove(unit);
-            if (AreAllUnitsIsDead(_enemies))
-            {
-                // Do something if all enemies dead. i.e Win pop out
-                Debug.Log("Won");
-            }
-
-            if (_alliesCanPlay.Count <= 0)
-            {
-                StartEnemiesTurn();
-            }
-            else
-            {
-                Debug.Log(_alliesCanPlay[0].name);
-            }
+            Debug.Log(activeUnitCanPlayList[0].name);
         }
     }
 
