@@ -3,7 +3,7 @@ using UnityEngine;
 
 /// <summary>
 /// Unit Controller:<c>MonoBehaviour</c><br/>
-/// Represents a game unit in the battle, with properties to access the unit's data, faction, and status. Provides information about whether the unit is deceased and can participate in the game.
+/// Represents a game unit in the game, and usefull in game battle, with properties to access the unit's data, faction, and status. Provides information about whether the unit is deceased and can participate in the game.
 /// </summary>
 public class UnitController : MonoBehaviour
 {
