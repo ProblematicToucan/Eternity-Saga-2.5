@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GarammStudio.SO.Core
+namespace GarammStudio.Core
 {
     public abstract class AbstractUnitSO : ScriptableObject
     {
