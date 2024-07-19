@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 namespace GarammStudio.Unit
 {
+    /// <summary>
+    /// Player Controller : <c>UnitController</c><br/>
+    /// Represent player controller for adventure/exploration state.
+    /// </summary>
     public class PlayerController : UnitController
     {
         [SerializeField] private Camera _camera;
